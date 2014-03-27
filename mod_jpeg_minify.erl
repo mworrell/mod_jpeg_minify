@@ -18,6 +18,11 @@
 
 -module(mod_jpeg_minify).
 
+-mod_title("JPEG Minify").
+-mod_description("Minimize uploaded JPEGs bij re-compressing with lower quality.").
+
+-author("Marc Worrell <marc@worrell.nl>").
+
 -export([
     observe_media_upload_preprocess/2
     ]).
