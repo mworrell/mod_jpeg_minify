@@ -69,7 +69,7 @@ minify(File, Width, Height, Size) when Width > 0, Height > 0 ->
             case filelib:file_size(TmpFile) of 
                 NewSize when NewSize < Size, NewSize > 0 ->
                     {ok, TmpFile, NewSize};
-                false ->
+                _NewSize ->
                     file:delete(TmpFile),
                     keep 
             end;
