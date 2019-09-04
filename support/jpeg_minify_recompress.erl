@@ -76,8 +76,6 @@ minify_all(Context0) ->
                 where mime = 'image/jpeg'
                   and size > $1
                   and created < $2
-                order by id desc
-                limit 10
                 ",
                 [
                     ?MINIFY_ALL_SIZE,
